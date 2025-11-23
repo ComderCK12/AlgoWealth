@@ -1,0 +1,135 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background: #f7f8fa;
+  font-family: "Inter", sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #111;
+  color: #fff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+.brand span {
+  color: #00c853;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-item {
+  color: #ccc;
+  cursor: pointer;
+  padding: 8px 5px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.menu-item:hover,
+.menu-item.active {
+  background: #00c853;
+  color: #111;
+}
+
+.logout-btn {
+  margin-top: 40px;
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.logout-btn:hover {
+  background: #d32f2f;
+}
+
+/* Main area */
+.main-view {
+  flex: 1;
+  padding: 40px 50px;
+}
+
+.welcome {
+  font-size: 36px;
+  font-weight: 800;
+  color: #111;
+}
+
+.tagline {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Dashboard cards */
+.stats-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #00c853;
+}
+
+/* Roles box */
+.roles-box {
+  margin-top: 40px;
+  background: #e8ffe9;
+  border-left: 6px solid #00c853;
+  padding: 16px 20px;
+  border-radius: 6px;
+}
+.roles-box h3 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  color: #111;
+}
+.roles-box p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #00c853;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .sidebar {
+    display: none;
+  }
+  .main-view {
+    padding: 20px;
+  }
+}

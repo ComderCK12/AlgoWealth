@@ -1,0 +1,51 @@
+#########################
+# 🌍 Global Ignore Rules
+#########################
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+logs/
+*.env
+*.env.local
+
+#########################
+# 💻 IDE Editors
+#########################
+.vscode/
+.idea/
+*.iml
+
+#########################
+# 🖥️ Frontend (React Vite)
+#########################
+algo-wealth-frontend/node_modules/
+algo-wealth-frontend/dist/
+algo-wealth-frontend/.vite/
+algo-wealth-frontend/npm-debug.log*
+algo-wealth-frontend/yarn-debug.log*
+algo-wealth-frontend/yarn-error.log*
+algo-wealth-frontend/pnpm-debug.log*
+algo-wealth-frontend/lerna-debug.log*
+algo-wealth-frontend/*.local
+
+# Optional to track VSCode settings if needed:
+# !algo-wealth-frontend/.vscode/extensions.json
+
+#########################
+# 🔧 Backend (Spring Boot)
+#########################
+algowealth/target/
+algowealth/.mvn/
+algowealth/*.jar
+algowealth/*.war
+algowealth/*.class
+algowealth/*.project
+algowealth/*.settings/
+algowealth/*.classpath
+
+#########################
+# 🗂️ System Files
+#########################
+*.swp
+*.swo
