@@ -5,28 +5,36 @@ import DashBoard from "./pages/DashBoard";
 import AdminPage from "./pages/AdminPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";
+import AppLayout from "./layout/AppLayout";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Public Routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
 
+        {/* Protected User Routes */}
         <Route
           path="/dashboard"
           element={
             <ProtectedRoute>
-              <DashBoard />
+              <AppLayout>
+                <DashBoard />
+              </AppLayout>
             </ProtectedRoute>
           }
         />
 
+        {/* Protected Admin Routes */}
         <Route
           path="/admin"
           element={
             <AdminRoute>
-              <AdminPage />
+              <AppLayout>
+                <AdminPage />
+              </AppLayout>
             </AdminRoute>
           }
         />

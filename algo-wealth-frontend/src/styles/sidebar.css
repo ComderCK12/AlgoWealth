@@ -1,0 +1,40 @@
+.sidebar {
+  width: 240px;
+  background: #000;
+  color: white;
+  padding: 20px;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.logo-A {
+  color: white;
+  font-weight: 900;
+}
+
+.logo-W {
+  color: #2ecc71;
+  font-weight: 900;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 12px 0;
+  cursor: pointer;
+  font-size: 16px;
+  border-bottom: 1px solid #333;
+}
