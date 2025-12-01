@@ -5,22 +5,27 @@ import {
   MdCalculate,
   MdCreditScore,
   MdArticle,
-  MdNewReleases
+  MdNewReleases,
+  MdSettings
 } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 import "../styles/sidebar.css";
 
 export default function Sidebar() {
   const [collapsed, setCollapsed] = useState(false);
 
+  
   const menuItems = [
-    { label: " Dashboard", icon: <MdDashboard /> },
-    { label: " Net Worth", icon: <MdAccountBalanceWallet /> },
-    { label: " Tax Calculator", icon: <MdCalculate /> },
-    { label: " Credit Score", icon: <MdCreditScore /> },
-    { label: " Blogs", icon: <MdArticle /> },
-    { label: " News", icon: <MdNewReleases /> },
-  ];
+  { label: "Dashboard", icon: <MdDashboard />, path: "/dashboard" },
+  { label: "Net Worth", icon: <MdAccountBalanceWallet />, path: "/networth" },
+  { label: "Tax Calculator", icon: <MdCalculate />, path: "/tax" },
+  { label: "Credit Score", icon: <MdCreditScore />, path: "/credit-score" },
+  { label: "Blogs", icon: <MdArticle />, path: "/blogs" },
+  { label: "News", icon: <MdNewReleases />, path: "/news" },
+  { label: "Settings", icon: <MdSettings />, path: "/settings" },
+];
+
 
   return (
     <div className={collapsed ? "sidebar collapsed" : "sidebar"}>
@@ -39,9 +44,11 @@ export default function Sidebar() {
 
       <ul className="menu">
         {menuItems.map((item, i) => (
-          <li key={i} className="menu-item">
-            {item.icon} 
-            {!collapsed && <span>{item.label}</span>}
+          <li key={i}>
+            <Link to={item.path}>
+              {item.icon}
+              {!collapsed && <span>{item.label}</span>}
+            </Link>
           </li>
         ))}
       </ul>
